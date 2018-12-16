@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'brandon kearns',
+    description: 'learn. earn. sojourn. repeat.',
+    author: '@brandon_kearns',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'brandon-kearns',
+        short_name: 'bk',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#369369',
+        theme_color: '#4d4d4d',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
