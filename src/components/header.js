@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         </h1>
       </section>
       <div style={{ justifyContent:'flex-end', display:'flex', flex: 1 }}>
-        <img src='icons/icon-72x72.png' style= {{ alignSelf:'center' }} />
+        <img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} />
       </div>
     </HomeNav>
     <Objective>
