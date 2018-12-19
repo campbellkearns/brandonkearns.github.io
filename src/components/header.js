@@ -7,7 +7,7 @@ import Image from '../components/image'
 
 const Header = ({ siteTitle }) => (
   <div>
-    <HomeNav>
+    <Banner>
       <section style={{ flex:1, wordBreak:'break-word' }}>
         <h1>
           { siteTitle }
@@ -16,12 +16,15 @@ const Header = ({ siteTitle }) => (
       <div style={{ justifyContent:'flex-end', display:'flex', flex: 1 }}>
         <img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} />
       </div>
-    </HomeNav>
-    <Objective>
-      <li>learn</li>
-      <li>earn</li>
-      <li>sojourn</li>
-    </Objective>
+    </Banner>
+    <SectionNav>
+      <ul>
+        <li>learn</li>
+        <li>earn</li>
+        <li>sojourn</li>
+      </ul>
+
+    </SectionNav>
   </div>
 )
 
@@ -33,13 +36,15 @@ Header.defaultProps = {
   siteTitle: '',
 }
 
-const Objective = styled.nav`
-  list-style: none;
-  display:flex;
-  justify-content:space-around;
+const SectionNav = styled.nav`
+  & ul {
+    list-style: none;
+    display:flex;
+    justify-content:space-around;
+  }
 `
 
-const HomeNav = styled.header`
+const Banner = styled.header`
   display: flex;
   justify-content: space-between;
   max-height: 20vh;
