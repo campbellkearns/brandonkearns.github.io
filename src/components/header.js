@@ -23,7 +23,6 @@ const Header = ({ siteTitle }) => (
         <li>earn</li>
         <li>sojourn</li>
       </ul>
-
     </SectionNav>
   </div>
 )
