@@ -20,7 +20,8 @@ const Header = ({ siteTitle, navLinks }) => {
         <Link to={"/"}><img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} alt="Home"/></Link>
       </div>
     </Banner>
-    { navLinks ?
+    { 
+      navLinks ?
       <SectionNav>
         {
           navLinks.map(link => (

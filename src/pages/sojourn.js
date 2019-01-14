@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 const SojournPage = () => (
   <Layout hasNavigation>
     <SEO title="sojourn | brandonkearns.com" />
-    <h1>sojourn</h1>
+    <h1>SOJOURN</h1>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
