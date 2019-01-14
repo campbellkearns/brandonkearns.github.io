@@ -3,6 +3,20 @@ module.exports = {
     title: 'brandon kearns',
     description: 'learn. earn. sojourn. repeat.',
     author: '@brandon_kearns',
+    navLinks: [
+      {
+        name: 'learn',
+        link: '/learn'
+      },
+      {
+        name: 'earn',
+        link: '/earn'
+      },
+      {
+        name: 'sojourn',
+        link: '/sojourn'
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,6 +30,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        plugins:[
+          {
+            resolve: `@fs/gatsby-plugin-drive`,
+            options: {
+              folderId: `16Mk3nteftpnMDrnsKnGvRYupFMNzNNFm`,
+              keyFile: `${__dirname}/credentials.json`,
+              destination: `${__dirname}/posts/`,
+            },
+          },
+        ],
         name: `posts`,
         path: `${__dirname}/posts`,
       },

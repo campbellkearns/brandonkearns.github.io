@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
-import Image from '../components/image'
+const Header = ({ siteTitle, navLinks }) => {
 
-const Header = ({ siteTitle }) => (
-  <div>
+  const linksStyle = {
+    textDecoration: 'none'
+  }
+  return (
+    <div>
     <Banner>
       <section style={{ flex:1, wordBreak:'break-word' }}>
         <h1>
@@ -14,18 +17,24 @@ const Header = ({ siteTitle }) => (
         </h1>
       </section>
       <div style={{ justifyContent:'flex-end', display:'flex', flex: 1 }}>
-        <img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} />
+        <Link to={"/"}><img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} alt="Home"/></Link>
       </div>
     </Banner>
-    <SectionNav>
-      <ul>
-        <li>learn</li>
-        <li>earn</li>
-        <li>sojourn</li>
-      </ul>
-    </SectionNav>
+    { navLinks ?
+      <SectionNav>
+        {
+          navLinks.map(link => (
+            <li key={link.name}>
+              <Link to={link.link} style={linksStyle}>{link.name}</Link>
+            </li>
+          ))
+        }
+      </SectionNav> :
+      null
+    }
   </div>
 )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -36,11 +45,10 @@ Header.defaultProps = {
 }
 
 const SectionNav = styled.nav`
-  & ul {
-    list-style: none;
-    display:flex;
-    justify-content:space-around;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  display:flex;
+  justify-content:space-around;
 `
 
 const Banner = styled.header`

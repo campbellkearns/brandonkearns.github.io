@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import '../components/index.css'
 
 const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data
@@ -10,18 +11,19 @@ const IndexPage = ({ data }) => {
 
   const repeat = edges.map(edge => {
     const { date, title } = edge.node.frontmatter
-    const { excerpt } = edge.node
+    const { excerpt, id, fields } = edge.node
+
     return (
-      <article>
-        <h3>{ title }</h3>
-        <h4>{ date }</h4>
+      <article key={id}>
+        <h4><Link to={fields.slug} className="post-title">{ title }</Link></h4>
+        <h5>{ date }</h5>
         <p>{ excerpt }</p>
       </article>
     )
   })
 
   return (
-    <Layout>
+    <Layout hasNavigation>
       <SEO
         title="home"
         keywords={['learn', 'earn', 'sojourn', 'technology blog', 'creative technologist',]}
@@ -35,20 +37,20 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const IndexQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date
-            title
-          }
-          excerpt
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        id
+        fields {
+          slug
         }
+        frontmatter {
+          date
+          title
+        }
+        excerpt
       }
     }
   }
-`
+}`

@@ -4,12 +4,12 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const SecondPage = () => (
+const EarnPage = () => (
   <Layout hasNavigation>
-    <SEO title="learn | brandonkearns.com" />
-    <h1>LEARN</h1>
+    <SEO title="earn | brandonkearns.com" />
+    <h1>EARN</h1>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default SecondPage
+export default EarnPage
