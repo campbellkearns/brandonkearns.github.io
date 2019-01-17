@@ -11,23 +11,17 @@ const Header = ({ siteTitle, navLinks }) => {
   return (
     <div>
     <Banner>
-      <section style={{ flex:1, wordBreak:'break-word' }}>
-        <h1>
-          { siteTitle }
-        </h1>
-      </section>
-      <div style={{ justifyContent:'flex-end', display:'flex', flex: 1 }}>
-        <Link to={"/"}><img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} alt="Home"/></Link>
-      </div>
+      <h1 style={{ 'flexGrow': '2' }}>{ siteTitle }</h1>
+      <Link style={{ }}to={"/"}><img src='/icons/icon-72x72.png' style= {{ alignSelf:'center' }} alt="Home"/></Link>
     </Banner>
     { 
       navLinks ?
       <SectionNav>
         {
           navLinks.map(link => (
-            <li key={link.name}>
+            <NavLink key={link.name}>
               <Link to={link.link} style={linksStyle}>{link.name}</Link>
-            </li>
+            </NavLink>
           ))
         }
       </SectionNav> :
@@ -46,16 +40,18 @@ Header.defaultProps = {
 }
 
 const SectionNav = styled.nav`
-  font-family: Arial, Helvetica, sans-serif;
   list-style: none;
   display:flex;
   justify-content:space-around;
+  `
+
+const NavLink = styled.li`
+  align-content: center;
 `
 
 const Banner = styled.header`
   display: flex;
-  justify-content: space-between;
-  max-height: 20vh;
+  align-items: center;
 `;
 
 

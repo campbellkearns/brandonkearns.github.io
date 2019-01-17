@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -14,11 +15,11 @@ const IndexPage = ({ data }) => {
     const { excerpt, id, fields } = edge.node
 
     return (
-      <article key={id}>
-        <h4><Link to={fields.slug} className="post-title">{ title }</Link></h4>
-        <h5>{ date }</h5>
+      <Post key={id}>
+        <h3><Link to={fields.slug} className="post-title">{ title }</Link></h3>
+        <h4 className="post-date">{ date }</h4>
         <p>{ excerpt }</p>
-      </article>
+      </Post>
     )
   })
 
@@ -34,6 +35,13 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
+
+const Post = styled.article`
+  display: grid;
+  grid-template-areas: "title title date"
+                       "post post post";
+`
+
 export default IndexPage
 
 export const IndexQuery = graphql`

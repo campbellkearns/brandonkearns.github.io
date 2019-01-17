@@ -1,23 +1,28 @@
-article {
+/* article {
     display: grid;
     grid-template-areas: "title date"
                          "post  post";
-}
-h4 {
+} */
+h3 {
     grid-area: title;
 }
-h5 {
+h4 {
     grid-area: date;
     text-align: right;
 }
 p {
     grid-area: post;
+    /* font-weight: 500; */
 }
 .post-title {
     color: #4d4d4d;
     text-decoration: none;
+    font-weight: 500;
 }
 .post-title:hover {
     background-color: #4d4d4d;
     color: white;
+}
+.post-date {
+    font-weight: 300;
 }
