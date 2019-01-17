@@ -1,8 +1,4 @@
-/* article {
-    display: grid;
-    grid-template-areas: "title date"
-                         "post  post";
-} */
+
 h3 {
     grid-area: title;
 }
@@ -12,7 +8,6 @@ h4 {
 }
 p {
     grid-area: post;
-    /* font-weight: 500; */
 }
 .post-title {
     color: #4d4d4d;
