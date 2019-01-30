@@ -3,22 +3,22 @@ import Typography from 'typography'
 const typography = new Typography({
   googleFonts: [
     {
-      name: 'Work Sans',
+      name: 'Karma',
       styles: [
-        'Regular',
-        'Light'
+           
       ]
     },
     {
-      name: 'Montserrat',
+      name: 'Work Sans',
       styles: [
-        'Regular',
-        'Light'
+        'Light',
+        'Regular'
       ]
-    }
+    },
   ],
-  headerFontFamily: [ 'Work Sans' ],
-  bodyFontFamily: [ 'Montserrat' ],
+  headerFontFamily: [ 'Karma' ],
+  bodyFontFamily: [ 'Work Sans' ],
+  bodyWeight: 300
 })
 
 export default typography

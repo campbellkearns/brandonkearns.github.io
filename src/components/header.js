@@ -20,7 +20,7 @@ const Header = ({ siteTitle, navLinks }) => {
         {
           navLinks.map(link => (
             <NavLink key={link.name}>
-              <Link to={link.link} style={linksStyle}>{link.name}</Link>
+              <Link to={link.link} style={linksStyle}><h4>{link.name}</h4></Link>
             </NavLink>
           ))
         }
