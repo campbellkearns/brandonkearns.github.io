@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   const repeat = edges.map(edge => {
     const { date, title } = edge.node.frontmatter
     const { excerpt, id, fields } = edge.node
-
+    
     return (
       <Post key={id}>
         <h3><Link to={fields.slug} className="post-title">{ title }</Link></h3>

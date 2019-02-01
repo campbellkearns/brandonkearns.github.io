@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/layout';
 
@@ -9,12 +10,20 @@ export default function Post({ data }) {
 
   return (
     <Layout>
-      <h2>{frontmatter.title}</h2>
-      <h4>{frontmatter.date}</h4>
+      <PostHeader>
+        <h2>{frontmatter.title}</h2>
+        <h3>{frontmatter.date}</h3>
+      </PostHeader>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
+
+const PostHeader = styled.header`
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+`
 
 export const postQuery = graphql`
   query PostBySlug($slug: String!) {

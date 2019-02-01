@@ -1,6 +1,7 @@
 ---
 date: 4/24/95
 title: When will i move?
+tag: earn
 ---
 
 Here's some text about my upcoming move which has been pending for three weeks and affecting my mood.
