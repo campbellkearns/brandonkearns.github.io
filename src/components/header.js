@@ -2,10 +2,11 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { red } from 'ansi-colors';
 
 const Header = ({ siteTitle, navLinks }) => {
 
-  const linksStyle = {
+  const linkStyle = {
     textDecoration: 'none'
   }
   return (
@@ -20,7 +21,7 @@ const Header = ({ siteTitle, navLinks }) => {
         {
           navLinks.map(link => (
             <NavLink key={link.name}>
-              <Link to={link.link} style={linksStyle}><h4>{link.name}</h4></Link>
+              <Link to={link.link} style={linkStyle} activeStyle={{ color:'red', }}><h4>{link.name}</h4></Link>
             </NavLink>
           ))
         }

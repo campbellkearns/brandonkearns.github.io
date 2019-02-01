@@ -24,7 +24,6 @@ const EarnPage = ({ data }) => {
   return (
     <Layout hasNavigation>
       <SEO title="earn" />
-      <h1>EARN</h1>
       {
         earnPosts
       }
