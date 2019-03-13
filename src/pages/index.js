@@ -13,13 +13,17 @@ const IndexPage = ({ data }) => {
   const repeat = edges.map(edge => {
     const { date, title } = edge.node.frontmatter
     const { excerpt, id, fields } = edge.node
-    
+
     return (
-      <Post key={id}>
-        <h3><Link to={fields.slug} className="post-title">{ title }</Link></h3>
-        <h4 className="post-date">{ date }</h4>
+      // TODO: return layout for post depending on post frontmatter..
+      // ..maybe (likely) tag
+      <article key={id}>
+        <Headline>
+          <h3><Link to={fields.slug} className="post-title">{ title }</Link></h3>
+          <h4 className="post-date">{ date }</h4>
+        </Headline>
         <p>{ excerpt }</p>
-      </Post>
+      </article>
     )
   })
 
@@ -36,7 +40,9 @@ const IndexPage = ({ data }) => {
   )
 }
 
-const Post = styled.article`
+
+
+const Headline = styled.header`
   display: grid;
   grid-template-areas: "title title date"
                        "post post post";

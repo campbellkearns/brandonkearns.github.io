@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import '../components/index.css'
+
 const EarnPage = ({ data }) => {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
@@ -15,7 +17,7 @@ const EarnPage = ({ data }) => {
 
     return (
       <Post key={id}>
-        <h3><Link to={fields.slug}>{ title }</Link></h3>
+        <h3><Link to={fields.slug} className="post-title">{ title }</Link></h3>
         <h4>{ date }</h4>
       </Post>
     )

@@ -1,3 +1,6 @@
+body {
+    background-color: #FBFEFF;
+}
 h3 {
     grid-area: title;
 }
@@ -9,13 +12,16 @@ p {
     grid-area: post;
 }
 .post-title {
-    color: #4d4d4d;
+    padding-bottom: .1rem;
     text-decoration: none;
-    font-weight: 500;
+    box-shadow: none;
+    transition: box-shadow .5s ease-out;
+}
+.post-title:visited {
+    color: inherit;
 }
 .post-title:hover {
-    background-color: #4d4d4d;
-    color: white;
+    box-shadow: 0 10px 0 -4px #b1ede8;
 }
 .post-date {
     font-weight: 300;
