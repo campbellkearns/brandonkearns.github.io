@@ -36,16 +36,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        plugins:[
-          {
-            resolve: `@fs/gatsby-plugin-drive`,
-            options: {
-              folderId: `16Mk3nteftpnMDrnsKnGvRYupFMNzNNFm`,
-              keyFile: `${__dirname}/credentials.json`,
-              destination: `${__dirname}/posts/`,
-            },
-          },
-        ],
         name: `posts`,
         path: `${__dirname}/posts`,
       },
