@@ -4,7 +4,7 @@ title: One Year in Tech
 cover: ""
 date: "01/07/2016"
 category: "sojourn"
-tag: "sojourn"
+tag: "earn"
 ---
 
 One year ago, I enrolled in a web development immersive course at [General Assembly][general-assembly].
