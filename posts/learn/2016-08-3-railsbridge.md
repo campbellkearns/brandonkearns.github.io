@@ -4,9 +4,7 @@ title: RailsBridge
 cover: ""
 date: "08/03/2016"
 category: "learn"
-tags:
-  - "code"
-  - "workshop"
+tag: "sojourn"
 ---
 
 It had been a long time since I had done any Rails in my career. My friend, [Raven](https://twitter.com/_raven_io), one of the organizers of RailsBridge Atlanta, asked me if I’d be willing to be a coach.

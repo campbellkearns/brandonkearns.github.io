@@ -4,8 +4,7 @@ title: Be That Person
 cover: ""
 date: "01/18/2016"
 category: "repeat"
-tags:
-  - "writing"
+tag: "repeat"
 ---
 
 Today, is the day that we take time to honor the legacy and contributions of the Rev. Dr. Martin Luther King, Jr. Perhaps, you had a day off from work (I did not) or did not attend class today. In any case, your world is better than it would have been without the vision, struggle and teachings of MLK and the millions of fellow freedom fighters the world over. I can think of no better way to honor that work than to continue it. To suggest that we have fully overcome the structure that was put in place is to concede to that very structure.

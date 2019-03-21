@@ -4,8 +4,7 @@ title: Chia Seed
 cover: ""
 date: "01/26/2016"
 category: "repeat"
-tags:
-  - "writing"
+tag: "repeat"
 ---
 
 What can we learn from the chia seed?
